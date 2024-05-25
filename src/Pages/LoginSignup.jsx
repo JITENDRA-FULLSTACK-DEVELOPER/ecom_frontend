@@ -17,7 +17,7 @@ const LoginSignup = () => {
   const login = async ()=>{
     console.log("Login Function Executed",formData)
     let responseDate;
-    await fetch('https://ecom-frontend-dun-ten.vercel.app/login',{
+    await fetch('https://e-com-backend-5.onrender.com/login',{
       method:'POST',
       headers:{
         Accept:'application/json',
@@ -37,7 +37,7 @@ const LoginSignup = () => {
   const signup = async ()=>{
     console.log("Signup Function Executed",formData);
     let responseDate;
-    await fetch('https://ecom-frontend-dun-ten.vercel.app/signup',{
+    await fetch('https://e-com-backend-5.onrender.com/signup',{
       method:'POST',
       headers:{
         Accept:'application/json',

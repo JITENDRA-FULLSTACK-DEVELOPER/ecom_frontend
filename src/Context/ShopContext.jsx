@@ -17,12 +17,12 @@ const ShopContextProvider = (props)=>{
     const [cartItem,setCartItem]=useState(getDefaultCart());
 
     useEffect(()=>{
-        fetch('https://ecom-frontend-dun-ten.vercel.app/allproducts')
+        fetch('https://e-com-backend-5.onrender.com/allproducts')
         .then((response)=>response.json())
         .then((data)=>setAll_Product(data))
         
         if(localStorage.getItem('auth-token')){
-            fetch('https://ecom-frontend-dun-ten.vercel.app/getcart',{
+            fetch('https://e-com-backend-5.onrender.com/getcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -38,7 +38,7 @@ const ShopContextProvider = (props)=>{
     const addToCart=(itemId)=>{
         setCartItem((prev)=>({...prev,[itemId]:prev[itemId]+1}))
         if(localStorage.getItem('auth-token')){
-            fetch('https://ecom-frontend-dun-ten.vercel.app/addtocart',{
+            fetch('https://e-com-backend-5.onrender.com/addtocart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -54,7 +54,7 @@ const ShopContextProvider = (props)=>{
     const removeFromCart=(itemId)=>{
         setCartItem((prev)=>({...prev, [itemId]: prev[itemId] - 1}))
         if(localStorage.getItem('auth-token')){
-            fetch('https://ecom-frontend-dun-ten.vercel.app/removefromcart',{
+            fetch('https://e-com-backend-5.onrender.com/removefromcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
