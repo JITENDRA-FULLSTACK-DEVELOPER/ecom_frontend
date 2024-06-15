@@ -3,6 +3,7 @@
     background: linear-gradient(180deg,#fde1ff,#e1ffea22 60%);
     display: flex;
     width: 100vw;
+    margin-bottom: 220px;
 }
 .hero-left{
     flex: 1;
@@ -50,7 +51,7 @@
 }
 
 .hero-right{
-    
+    margin-top: auto;
     flex: 1;
     display: flex;
     align-items: center;
